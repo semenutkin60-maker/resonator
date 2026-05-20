@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resonator</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+    <a href="/" class="header__logo-link"><img class="header__logo" src="img/logo.svg" alt="Logo"></a>
+    <nav class="header__nav">
+        <ul class="header__nav-list">
+            <li class="header__nav-item"><a href="#" class="active header__nav-link">Home</a></li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Pages</a></li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Podcast</a></li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Blog</a></li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Shop</a></li>
+        </ul>
+    </nav>
+    <div class="header__left-zone">
+        <div class="header__left-zone-search">
+            <img class="header__left-zone-search-icon" src="img/header/search glass.svg" alt="Search">
+            <span class="header__left-zone-search-text">Search</span>
+        </div>
+        
+        <button class="header__left-zone-burger" aria-label="Menu">
+            <div class="header__burger-row">
+                <span class="header__burger-dot"></span>
+                <span class="header__burger-dot"></span>
+                <span class="header__burger-dot"></span>
+            </div>
+            <div class="header__burger-row">
+                <span class="header__burger-dot"></span>
+                <span class="header__burger-dot"></span>
+                <span class="header__burger-dot"></span>
+            </div>
+            <div class="header__burger-row">
+                <span class="header__burger-dot"></span>
+                <span class="header__burger-dot"></span>
+                <span class="header__burger-dot"></span>
+            </div>
+        </button>
+    </header>
+
+    <main>
+        <section class="episode">
+            <img class="episode__background" src="img/episode/episode-background.png" alt="image episode">
+            <div class="container episode_main">
+                <div class="episode__greetings">
+                    <h1 class="episode__greetings-title"></h1>
+                    <p class="episode__greetings-text"></p>
+                    <div class="episode__greetings-buttons">
+                        <button class="episode__greetings-button1"></button>
+                        <button class="episode__greetings-button2"></button>
+                    </div>
+                </div>
+                <div class="episode__timmy-design">
+                    <img class="episode__timmy-design-img" src="" alt="">
+                    <div class="episode__timmy-design-content">
+                        <div class="episode__timmy-design-content-name">
+                            <h2 class="episode__timmy-design-content-name-title"></h2>
+                            <div class="episode__timmy-design-content-name-button">
+                                <p class="episode__timmy-design-content-button-text"></p>
+                                <img src="episode__timmy-design-content-button-icon" alt="button-icon">
+                            </div>
+                        </div>
+                        <p class="episode__timmy-design-content-text"></p>
+                        <div class="episode__timmy-design-content-player">
+                            <div class="episode__timmy-design-content-player-round"></div>
+                            <div class="episode__timmy-design-content-player-seconds">
+                                <p class="episode__timmy-design-content-player-second"></p>
+                                <p class="episode__timmy-design-content-player-second"></p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
