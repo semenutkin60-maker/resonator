@@ -47,7 +47,8 @@ img {
 }
 
 .container {
-    max-width: 1300px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .active {
@@ -60,6 +61,24 @@ img {
 :root {
     --color-dark: #000000;
     --color-gray: #8E8B8C;
+}
+
+.button {
+    border: none;
+    background: none;
+    color: inherit;
+    cursor: pointer;
+    transition: none;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+    outline: none;
+    box-shadow: none;
+    transform: none;
+    background: none;
+    color: inherit;
 }
 
 /* header */
@@ -183,6 +202,207 @@ img {
     z-index: -1;
 }
 
+.episode__container {
+    position: relative;
+    bottom: 570px;
+    display: flex;
+    
+}
+
+.episode__greetings-title {
+    font-weight: 700;
+    font-size: 80px;
+    width: 600px;
+}
+
+.episode__greetings-text {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.episode__greetings-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.episode__icon-btn {
+    transition: transform 0.25s ease;
+}
+
+.episode__icon-btn:hover {
+    transform: scale(1.05);
+}
+
+.episode__icon-img {
+    width: 170px;
+    height: 45px;
+}
+
+.episode__card {
+    position: relative;
+    top: 40px;
+}
+
+.episode__player {
+    display: flex;
+    width: 1010px; 
+    max-width: 1300px;
+    max-height: 291px;
+    height: 216px;
+    border-radius: 10px;     
+    background-color: #FFFFFF;       
+    position: relative;
+    top: 370px;
+    right: 600px;
+}
+
+.episode__player-img {
+    max-width: 291px;
+    max-height: 291px;
+    border-radius: 10px 0 0 10px;
+}
+
+.episode__player-details {
+    display: block;
+    margin: 20px;
+    width: 100%;
+}
+
+.episode__player-details-description {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.episode__player-title {
+    font-weight: 700;
+    font-size: 38px;
+    width: 430px;
+}
+
+.episode__player-meta {
+    color: var(--color-gray);
+}
+
+.player-meta {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.episode__player-details-episode-page {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.episode-page-text {
+    width: 100px;
+    margin-right: 11px;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.episode-page-text:hover {
+    text-decoration: underline;
+}
+
+.episode-page-icon {
+    width: 19px;
+    height: 13px;
+}
+
+.episode__player-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-gray);
+    height: 70px;
+    width: 100%;
+}
+
+.episode__player-audio {
+    display: flex;
+}
+
+.episode__player-live {
+    display: flex;
+    align-items: center;
+}
+
+.episode__player-live-dot {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid var(--color-gray);
+}
+
+.episode__player-live-tag {
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.margin {
+    margin-left: 24px;
+    margin-right: 12px;
+}
+
+.episode__player-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.episode__player-progress-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+.episode__player-progress-filled {
+    width: 420px;
+    height: 2px;
+    background-color: black;
+}
+
+.episode__player-progress-handle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: black;
+    position: relative;
+    transition: transform 0.25s ease, background-color 0.25s ease; 
+}
+
+.episode__player-progress-handle:hover {
+    transform: scale(1.05);
+    background-color: rgb(255, 123, 0); 
+}
+
+.player-time {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.episode__player-sound {
+    width: 50px;
+    height: 50px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.25s ease;
+}
+
+.episode__player-sound:hover {
+    transform: scale(1.05);
+}
+
+.episode__player-sound-icon {
+    width: 22px;
+    height: 100%;
+}
+
 @media (max-width: 1200px) {
     .header__nav-list {
         gap: 15px;
@@ -272,7 +492,6 @@ img {
         padding: 0 12px;
     }
 }
-
 
 @media (max-width: 480px) {
     .header {

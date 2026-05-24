@@ -51,33 +51,69 @@
     <main>
         <section class="episode">
             <img class="episode__background" src="img/episode/episode-background.png" alt="image episode">
-            <div class="container episode_main">
+            <div class="container episode__container">
                 <div class="episode__greetings">
-                    <h1 class="episode__greetings-title"></h1>
-                    <p class="episode__greetings-text"></p>
+                    <h1 class="episode__greetings-title">New episode available now</h1>
+                    <p class="episode__greetings-text">Available on Apple Soundcast and Spotify.</p>
                     <div class="episode__greetings-buttons">
-                        <button class="episode__greetings-button1"></button>
-                        <button class="episode__greetings-button2"></button>
+                        <button class="button episode__icon-btn">
+                            <img class="episode__icon-img" src="img/episode/episode-aple.svg" alt="Apple Podcast">
+                        </button>
+                        <button class="button episode__icon-btn">
+                            <img class="episode__icon-img" src="img/episode/episode-soundcloud.svg" alt="Soundcloud">
+                        </button>
                     </div>
                 </div>
-                <div class="episode__timmy-design">
-                    <img class="episode__timmy-design-img" src="" alt="">
-                    <div class="episode__timmy-design-content">
-                        <div class="episode__timmy-design-content-name">
-                            <h2 class="episode__timmy-design-content-name-title"></h2>
-                            <div class="episode__timmy-design-content-name-button">
-                                <p class="episode__timmy-design-content-button-text"></p>
-                                <img src="episode__timmy-design-content-button-icon" alt="button-icon">
+                <div class="episode__card">
+                        <div class="container episode__player">
+                            <div class="episode__player-avatar">
+                                <img class="episode__player-img" src="img/episode/player-timmy.png" alt="Timmy Mike">
                             </div>
-                        </div>
-                        <p class="episode__timmy-design-content-text"></p>
-                        <div class="episode__timmy-design-content-player">
-                            <div class="episode__timmy-design-content-player-round"></div>
-                            <div class="episode__timmy-design-content-player-seconds">
-                                <p class="episode__timmy-design-content-player-second"></p>
-                                <p class="episode__timmy-design-content-player-second"></p>
-                            </div>
+                        
+                            <div class="episode__player-details">
+                                <div class="episode__player-details-description">
+                                    <div class="episode__player-details-title">
+                                        <h3 class="episode__player-title">Timmy Mike: the nature of design</h3>
+                                        <div class="episode__player-meta">
+                                            <span class="player-meta episode__player-episode">Episode 1</span>
+                                            <span class="player-meta episode__player-separator">•</span>
+                                            <span class="player-meta episode__player-topic">Microphone</span>
+                                            <span class="player-meta episode__player-separator">•</span>
+                                            <span class="player-meta episode__player-duration-total">0:13</span>
+                                        </div>
+                                    </div>
+                                    <div class="episode__player-details-episode-page">
+                                        <a href="/" class="episode-page-text">Episode page</a>
+                                        <img class="episode-page-icon" src="img/icon/frame-icon.svg" alt="">
+                                    </div>
+                                </div>
+                                
                             
+                                <div class="episode__player-controls">
+                                    <div class="episode__player-live">
+                                        <div class="episode__player-live-dot"></div>
+                                        <span class="episode__player-live-tag margin">10s</span>
+                                        <span class="episode__player-live-tag">10s</span>
+                                    </div>
+                                
+                                    <div class="episode__player-audio">
+                                        <div class="episode__player-progress">
+                                            <div class="episode__player-progress-bar">
+                                                <div class="episode__player-progress-handle"></div>
+                                                <div class="episode__player-progress-filled"></div>
+                                            </div>
+                                            <div class="episode__player-time">
+                                                <span class="player-time episode__player-time-current">00:00</span>
+                                                <span class="player-time episode__player-time-sep">/</span>
+                                                <span class="player-time episode__player-time-total">00:00</span>
+                                            </div>
+                                        </div>
+                                        <button class="button episode__player-sound" aria-label="Sound">
+                                            <img class="episode__player-sound-icon" src="img/episode/player-sound.svg" alt="Volume">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
