@@ -83,7 +83,7 @@ img {
 }
 
 .episode-page {
-    width: 100px;
+    width: clamp(14px, 5.2vw, 100px);
     font-weight: 700;
     font-size: 15px;
 }
