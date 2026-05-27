@@ -810,32 +810,167 @@ img {
     object-fit: contain;
 }
 
+/* footer */
+
+.footer {
+    width: 100%;
+    background-color: #000000;
+    box-sizing: border-box;
+    padding: clamp(40px, 5.2vw, 100px) 0 clamp(30px, 3.2vw, 64px) 0;
+    color: #ffffff;
+}
+
+.footer__body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(30px, 4.2vw, 64px);
+}
+
+.footer__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1 1 250px;
+}
+
+.footer__logo {
+    width: auto !important;
+    height: clamp(20px, 1.4vw, 28px) !important;
+    object-fit: contain;
+}
+
+.footer__tagline {
+    font-size: 13px;
+    color: var(--color-gray);
+    margin: 0;
+}
+
+.footer__content {
+    flex: 2 1 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__title {
+    font-family: "Lato", sans-serif;
+    font-size: clamp(22px, 1.8vw, 27px);
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0;
+    margin-bottom: clamp(40px, 3.8vw, 72px);
+    max-width: 640px;
+}
+
+.footer__middle {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(24px, 2.5vw, 48px);
+    margin-bottom: clamp(40px, 3.8vw, 72px);
+}
+
+.footer__col {
+    flex: 1 1 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer__col-title {
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    color: var(--color-gray);
+    margin: 0;
+    margin-bottom: 12px;
+}
+
+.footer__info-link,
+.footer__text {
+    font-size: 15px;
+    margin: 0;
+    display: block;
+    line-height: 1.5;
+}
+
+.footer__info-link:hover {
+    text-decoration: underline;
+}
+
+.footer__socials {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.footer__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(18px, 1.4vw, 22px);
+    height: clamp(18px, 1.4vw, 22px);
+    transition: transform 0.2s ease;
+}
+
+.footer__social-link:hover {
+    transform: scale(1.1);
+}
+
+/* Настройка картинок внутри ссылок */
+.footer__social-link img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain;
+    /* По умолчанию делаем темные контурные иконки (Instagram/YouTube) белыми */
+    filter: brightness(0) invert(1);
+}
+
+/* Для Facebook и Twitter отменяем инверсию в круг и просто выкручиваем яркость их серых элементов до белого */
+.footer__social-link--filled img {
+    filter: brightness(2) !important;
+}
+
+.footer__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(24px, 2.5vw, 48px);
+}
+
+.footer__legal-link,
+.footer__copy {
+    font-size: 13px;
+    color: var(--color-gray);
+    margin: 0;
+    display: inline-block;
+}
+
+.footer__copy {
+    max-width: 300px;
+}
+
+.footer__legal-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
 @media (max-width: 1200px) {
     .header__nav-list {
         gap: 15px;
     }
-    
     .header__nav-link {
         font-size: 14px;
     }
-
     .episode {
         height: clamp(100px, 31,25vw, 600);
     } 
-
     .episode__container {
         bottom: 470px;
     }
-
     .episode__greetings-title {
         font-size: 60px;
         width: 500px;
     }
-
     .episode__card {
         display: none;
     }
-
     .podcasts__list{
         display: none;
     }
@@ -845,61 +980,60 @@ img {
     .header__nav-list {
         gap: 12px;
     }
-    
     .header__nav-link {
         font-size: 13px;
     }
-    
     .header__left-zone-search-text {
         font-size: 13px;
     }
-    
     .header__logo {
         width: 110px;
     }
-
     .episode {
         height: 500px;
     }
-
     .episode__container {
         bottom: 370px;
         margin-left: 100px;
     }
-
     .episode__greetings-title {
         font-size: 50px;
         width: 400px;
     } 
-
     .places__content {
         display: block;
     }
-
     .places {
         display: block;
     }
-
     .places__content {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
     .places__title {
         text-align: center;
     }
-
     .places__description {
         width: clamp(200px, 60vw, 600px);
         text-align: center;
     }
-
     .places__image {
         display: block;
         margin: 20px auto 0;
         width: clamp(200px, 50%, 400px);
         height: auto;
+    }
+    .footer__body {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .footer__brand {
+        flex: none;
+    }
+    .footer__content {
+        flex: none;
+        width: 100%;
     }
 }
 
@@ -907,30 +1041,39 @@ img {
     .episode {
         height: 400px;
     }
-
     .episode__container {
         bottom: 290px;
         margin-left: 100px;
         padding: 0;
         margin: 0;
     }
-
     .episode__greetings {
         display: block;
         margin: 0 auto;
     }
-
     .episode__greetings-text {
         text-align: center;
     }
-
     .episode__greetings-title {
         font-size: 40px;
         width: 500px;
     } 
-
     .episode__greetings-buttons {
         justify-content: center;
+    }
+    .footer__bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 16px;
+    }
+    .footer__bottom .footer__col {
+        flex: none;
+        align-items: center;
+    }
+    .footer__copy {
+        text-align: center;
+        max-width: 100%;
     }
 }
 
@@ -939,33 +1082,46 @@ img {
         height: 60px;
         padding: 0 10px;
     }
-    
     .header__left-zone-search {
         display: inline-flex;
     }
-    
     .header__logo {
         width: 100px;
     }
-
     .header__nav {
         display: none;
     }
-    
     .header__left-zone-burger {
         display: flex;
     }
-    
     .container {
         padding: 0 15px;
     }
-
     .episode {
         height: 350px;
     }
-
     .episode__background {
         bottom: 60px;
+    }
+}
+
+@media (max-width: 625px) {
+    .footer__brand {
+        align-items: center;
+        text-align: center;
+    }
+    .footer__middle {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 24px;
+    }
+    .footer__col {
+        flex: none;
+        align-items: center;
+    }
+    .footer__socials {
+        justify-content: center;
     }
 }
 
@@ -973,93 +1129,80 @@ img {
     .header__nav {
         display: none;
     }
-    
     .header__logo {
         width: 85px;
     }
-    
     .header__left-zone-search-text {
         font-size: 12px;
     }
-    
     .header__left-zone-search-icon {
         width: 14px;
         height: 18px;
     }
-    
     .header__left-zone-search {
         margin-right: 15px;
     }
-
     .container {
         padding: 0 12px;
     }
-
     .episode {
         height: 300px;
     }
-
     .episode__container {
         bottom: 250px;
         margin-left: 100px;
         padding: 0;
         margin: 0;
     }
-
     .episode__greetings-text {
         text-align: center;
         font-size: 14px;
         margin-bottom: 15px;
     }
-
     .episode__greetings-title {
         font-size: 30px;
         width: 500px;
         text-align: center;
-    } 
+    }
+    .footer__title {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media (max-width: 480px) {
     .header__logo {
         width: 75px;
     }
-    
     .header__left-zone-search-text {
         display: none; 
     }
-    
     .header__left-zone-search-icon {
         width: 16px;
         height: 16px;
         margin-right: 0;
     }
-    
     .header__left-zone-search {
         margin-right: 12px;
     }
-    
     .header__left-zone-burger {
         gap: 4px;
         padding: 4px;
     }
-    
     .header__burger-row {
         gap: 4px;
     }
-    
     .header__burger-dot {
         width: clamp(2px, 1.2vw, 3px);
         height: clamp(2px, 1.2vw, 3px);
     }
-    
     .container {
         padding: 0 10px;
     }
-
     .episode {
         height: 230px;
     }
-
     .episode__container {
         bottom: 200px;
         margin-left: 100px;
@@ -1067,27 +1210,22 @@ img {
         margin: 0;
         justify-content: center;
     }
-
     .episode__greetings-text {
         text-align: center;
         font-size: 14px;
         margin-bottom: 15px;
     }
-
     .episode__greetings-title {
         font-size: 23px;
         width: 500px;
         text-align: center;
     } 
-
     .episode__greetings-buttons {
         justify-content: center;
     }
-
     .episode__icon-btn {
         width: 124px;
     }
-
     .episode__icon-img {
         width: 124px;
     }
@@ -1096,6 +1234,5 @@ img {
 @media (max-width: 380px) {
     .episode__container {
         bottom: 180px;
-        
     }
 }
